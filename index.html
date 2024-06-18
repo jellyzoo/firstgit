@@ -1,19 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>깃헙 협업하기</title>
-</head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      .slide {
+        height: 300px;
+        overflow: hidden;
+      }
+      .slide ul {
+        display: flex;
 
-<body>
-    <header></header>
-    <section id="section01"></section>
-    <section id="section02"></section>
-    <section id="section03"></section>
-    <footer></footer>
-</body>
+        width: -webkit-calc(100% * 4);
+        width: -moz-calc(100% * 4);
+        width: calc(100% * 4);
 
+        animation: slide 8s infinite;
+      }
+
+      .slide li {
+        height: 300px;
+        width: -webkit-calc(100% / 4);
+        width: -moz-calc(100% / 4);
+        width: calc(100% / 4);
+      }
+
+      .slide li:nth-child(1) {
+        background: url(./img/1.jpg) no-repeat;
+        background-size: cover;
+      }
+      .slide li:nth-child(2) {
+        background: url(./img/2.jfif) no-repeat;
+        background-size: cover;
+      }
+      .slide li:nth-child(3) {
+        background: url(./img/3.jfif) no-repeat;
+        background-size: cover;
+      }
+      .slide li:nth-child(4) {
+        background: url(./img/20.jpg) no-repeat;
+        background-size: cover;
+      }
+
+      @keyframes slide {
+        0% {
+          margin-left: 0;
+        }
+        10% {
+          margin-left: 0;
+        }
+        25% {
+          margin-left: -100%;
+        }
+        35% {
+          margin-left: -100%;
+        }
+        50% {
+          margin-left: -200%;
+        }
+        60% {
+          margin-left: -200%;
+        }
+        75% {
+          margin-left: -300%;
+        }
+        85% {
+          margin-left: -300%;
+        }
+        100% {
+          margin-left: 0;
+        }
+      }
+      ul li {
+        list-style: none;
+      }
+      h1 {
+        width: 20%;
+        float: left;
+        margin: 0 auto;
+        text-align: center;
+      }
+      header {
+        width: 1280px;
+        height: 50px;
+        margin: 0 auto;
+        background-color: beige;
+      }
+      nav {
+        width: 80%;
+        font-size: 0.875em;
+        float: left;
+      }
+      nav > ul {
+        width: 1280px;
+      }
+      nav > ul > li {
+        /* 메인매뉴 */
+        float: left;
+        width: 200px;
+        position: relative;
+      }
+      nav > ul > li > a {
+        display: block;
+        padding: 10px 20px;
+        font-weight: 500;
+        background-color: #999;
+        color: #fff;
+        text-align: center;
+      }
+      nav ul ul {
+        /* 서브메뉴 */
+        display: none;
+        position: absolute;
+        top: 40;
+        left: 0;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        margin: 0;
+        padding: 0;
+      }
+      nav ul ul a {
+        display: block;
+        width: 100%;
+        padding: 0 38px 0 38px;
+        font-weight: 600;
+        text-align: center;
+        background-color: #fff;
+        color: #666;
+        line-height: 38px;
+      }
+      nav > ul > li:hover ul {
+        /* 서브메뉴 보이게 */
+        display: block;
+      }
+
+      nav ul ul a:hover {
+        background-color: #f4f4f4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">
+        <a href="index.html">로고</a>
+      </h1>
+      <nav>
+        <ul class="cf">
+          <li>
+            <a href="#">menu1</a>
+            <ul class="sub">
+              <li><a href="#">sub1</a></li>
+              <li><a href="#">sub2</a></li>
+              <li><a href="#">sub3</a></li>
+              <li><a href="#">sub4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">menu2</a>
+            <ul class="sub">
+              <li><a href="#">sub1</a></li>
+              <li><a href="#">sub2</a></li>
+              <li><a href="#">sub3</a></li>
+              <li><a href="#">sub4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">menu3</a>
+            <ul class="sub">
+              <li><a href="#">sub1</a></li>
+              <li><a href="#">sub2</a></li>
+              <li><a href="#">sub3</a></li>
+              <li><a href="#">sub4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">mendu4</a>
+            <ul class="sub">
+              <li><a href="#">sub1</a></li>
+              <li><a href="#">sub2</a></li>
+              <li><a href="#">sub3</a></li>
+              <li><a href="#">sub4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="section01">
+      <div>인서의 브랜치 humanis3-section1 첫번째 커밋</div>
+      <div>인서의 브랜치 humanis3-section1 두번째 커밋</div>
+    </section>
+    <section id="section02">
+      <div class="slide">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <section id="section03">
+      <a href="#"><img src="" alt="아름다운 사진(source 넣을예정)" /></a>
+      <p style="font-weight: bold; font-size: 20px">
+        [이것은 섹션 3 영역입니다: 아름다운 봉사 활동!~]
+      </p>
+      <p style="font-style: italic">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+      <button style="border-radius: 10px; font-weight: bold">
+        <a href="https://www.naver.com/"></a>참여하기
+      </button>
+    </section>
+    <footer style="background-color: #222222; width: 100%">
+      <div
+        class="wrap"
+        style="display: flex; width: '1440px'; margin: 0 auto; color: #ffffff"
+      >
+        <div class="logo" style="font-size: 40px; color: #999999">HUMAN</div>
+        <div class="details" style="padding-left: 100px">
+          <ul style="list-style: none; display: flex; gap: 10px">
+            <li>이용약관</li>
+            <li>|</li>
+            <li>개인정보처리방침</li>
+            <li>|</li>
+            <li>오시는 길</li>
+            <li>|</li>
+            <li>사이트맵</li>
+          </ul>
+          <address style="padding-left: 40px">
+            경기도 수원시 팔달구 갓매산로38, 다성프라자 3F<br />
+            TEL.031-252-7277 FAX.070-4369-0387
+          </address>
+          <div style="padding-left: 40px">
+            COPYRIGHT HUMAN. ALL RIGHT RESERVED
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
